@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ <!-- namespace指定和哪个Mapper映射器接口对应 -->
+<mapper namespace="cn.xdl.mapper.UserDAO">
+	<!-- 定义SQL语句 -->	
+    <select id="find" 
+      resultType="cn.xdl.bean.User">
+         select * from et_user where  username = #{username}  
+             and password = #{password}
+    </select>
+</mapper>
+
+
+
+
+
